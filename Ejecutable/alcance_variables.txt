@@ -1,0 +1,28 @@
+PROGRAMA;
+
+**Hay un error en este ejemplo, que la variable no fue declarada, también se usa una
+**una variable global dentro de una función y debería funcionar correctamente
+
+LONG l9,l8;
+
+**FUNCION CON VARIABLE DE AMBITO L10
+LONG FUNC funcambito(LONG l1)
+LONG l10;
+BEGIN 
+l10:=10;
+RETURN l10;
+END;
+
+**FUNCION CON VARIABLE DE GLOBAL L9
+LONG FUNC funcglobal(LONG l1)
+BEGIN 
+l9:=l1 + 9; **Se puede usar l9 porque es de ambito global
+RETURN l9;
+END;
+
+BEGIN
+
+l10:=10; **error la variable no se puede usar en este ambito, viola las restricciones de alcance
+l9:= 5;
+l8 := funcglobal(LONG l9);
+END

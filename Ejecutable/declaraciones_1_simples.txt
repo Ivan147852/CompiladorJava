@@ -1,0 +1,18 @@
+PROGRAMA;
+
+**Hay un unico error que hay una variable redeclarada
+
+**LISTA DE VARIABLES, UNA O MÁS
+LONG l1,l2,l3;
+SINGLE s1,s2,s3;
+
+**VARIABLE REDECLARADA
+LONG l1;
+
+BEGIN
+
+**MENSAJE SIMPLE
+
+PRINT(%Prueba declaraciones simples%);
+
+END

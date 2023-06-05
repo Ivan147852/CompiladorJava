@@ -1,0 +1,34 @@
+PROGRAMA;
+
+**El programa debería compilar (corregimos que la funcionalidad de los tipos definidos
+**sea la correcta), el ejemplo es el del mail, y al final verificamos el resultado
+**de la suma
+
+LONG a,b,c;
+
+**TIPO DEFINIDO
+TYPEDEF td = LONG FUNC (LONG);
+td x, y, z;
+
+LONG FUNC f(LONG p)
+BEGIN
+   p := p +1;
+RETURN p;
+END;
+
+BEGIN
+
+b := 4;
+c := 3;
+
+x := f;
+z := x;
+a := x(LONG b) + z(LONG c);
+
+IF (a <> 9) THEN
+PRINT(%ESTA MAL%); **Está mal debería ser 9
+ELSE
+PRINT(%ESTA BIEN%); **Es correcto
+ENDIF;
+
+END

@@ -1,0 +1,38 @@
+PROGRAMA;
+
+**Hay 3 errores en este ejemplo, el primero, el parametro de llamado de funcion es incorrecto
+**El segundo es que potencia2 debería usarse dentro de un try-catch
+**Y el tercero es al intentar asignar un valor a un tipo definido
+
+**LISTA DE VARIABLES, UNA O MÁS
+LONG l1,l2,l3;
+SINGLE s1,s2,s30;
+
+TYPEDEF tipodefll = SINGLE FUNC(LONG);
+
+**FUNCION CON POSTCONDICION
+SINGLE FUNC potencia2(LONG l1)
+LONG l2;
+SINGLE s4,s3;
+BEGIN
+s3 := 1.0;
+s4:=s3*s3;
+RETURN s4;
+POST : (s4 > s3);
+END;
+
+**BLOQUE DE PROGRAMA
+BEGIN
+
+s1:= 1.0;
+s2 := potencia2(LONG s1); ** s1 es de tipo SINGLE. No debe permitirse esta sentencia
+** potencia2 debería usarse sólo en el contexto de un TRY-CATCH. La post no se cumple en este caso
+
+TRY
+	tipodefll := potencia2(LONG l1); **No se puede asignar valor a un tipo definido
+CATCH
+BEGIN
+	PRINT(%catch%);
+END;
+
+END

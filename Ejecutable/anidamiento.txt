@@ -1,0 +1,27 @@
+PROGRAMA;
+
+**Debería compilar. El bloque repeat se repite 5 veces, las primeras 4 se imprime tambien
+**"todavia no" y la 5ta se imprime es 10
+
+**LISTA DE VARIABLES, UNA O MÁS
+LONG l1,l2,l3;
+SINGLE s1,s2,s3;
+
+BEGIN
+
+
+**BLOQUE REPEAT
+l2 := 5;
+l3 := 10;
+REPEAT (l1 := 1; l1 < 10; 2)
+BEGIN
+l2 := l2 + 1;
+	IF(l2 == 10) THEN
+	  PRINT(%es 10%);
+	ELSE
+	  PRINT (%todavia no%);
+	ENDIF;
+PRINT(%en repeat%);
+END;
+
+END

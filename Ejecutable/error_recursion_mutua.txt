@@ -1,0 +1,30 @@
+PROGRAMA;
+
+**En la primera invocacion ingresa a func2 y no es posible que haya recursión mutua
+**En la segunda invocación ya es posible, en caso de que vuelva a func2.
+
+**FUNCION DE RECURSION MUTUA 1
+LONG FUNC funcrec1(LONG l3)
+LONG l1;
+BEGIN 
+l3:= funcrec2(LONG l1);
+RETURN l3;
+END;
+
+**FUNCION DE RECURSION MUTUA 2
+LONG FUNC funcrec2(LONG l4)
+LONG l2;
+BEGIN 
+l4:= funcrec1(LONG l2);
+RETURN l4;
+END;
+
+LONG l1,l2;
+
+BEGIN
+
+l2 := 5;
+
+l1 := funcrec1(LONG l2);**error de recursion mutua
+
+END

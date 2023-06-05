@@ -1,0 +1,34 @@
+PROGRAMA;
+
+**El programa ingresa al repeat y en la 4ta iteracion, sale por el break
+**Y al salir verifica que el valor con el que salio es correcto imprimiendo "ok"
+
+**LISTA DE VARIABLES, UNA O MÁS
+LONG l1,l2,l3;
+SINGLE s1,s2,s3;
+
+BEGIN
+
+**BLOQUE REPEAT
+l2 := 5;
+l3 := 10;
+REPEAT (l1 := 1; l1 < l3-3; 1)
+BEGIN
+l2 := l2 + 1;
+PRINT(%en repeat%);
+IF (l2 > 8) THEN
+	BEGIN
+	PRINT(%SALGO POR EL BREAK%);
+	BREAK;
+	END
+ENDIF;
+
+END;
+
+IF(l2 == 9) THEN
+  PRINT(%ok%);
+ELSE
+  PRINT (%revisar%);
+ENDIF;
+
+END

@@ -1,0 +1,18 @@
+PROGRAMA;
+
+**Hay un error de redefincion de una variable
+
+**TIPO DEFINIDO
+TYPEDEF td = LONG FUNC (LONG);
+td x, y, z;
+
+**VARIABLE REDECLARADA
+TYPEDEF td = SINGLE FUNC (SINGLE);
+
+BEGIN
+
+**MENSAJE SIMPLE
+
+PRINT(%Prueba declaracion tipos definidos%);
+
+END

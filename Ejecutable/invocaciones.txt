@@ -1,0 +1,85 @@
+PROGRAMA;
+
+**El programa debería imprimir "anduvo bien", al ejecutar correctamente el código de la función
+**Debería imprimir "se cumplió la postcondición"
+**Y por último "Se fue por el catch"
+
+**LISTA DE VARIABLES, UNA O MÁS
+LONG l1,l2,l3;
+SINGLE s1,s2,s30;
+
+**FUNCION SIN POSTCONDICION
+LONG FUNC potenciall(LONG l1)
+LONG l2;
+BEGIN
+l2:=l1*l1;
+RETURN l2;
+END;
+
+**FUNCION CON POSTCONDICION
+SINGLE FUNC potenciass(SINGLE s3)
+SINGLE s4;
+BEGIN
+s4:=s3*s3;
+RETURN s4;
+POST : (s4 >= s3);
+END;
+
+**FUNCION CON POSTCONDICION
+SINGLE FUNC potenciass2(SINGLE s3)
+SINGLE s4;
+BEGIN
+s4:=s3*s3;
+RETURN s4;
+POST : (s4 < s3);
+END;
+
+**FUNCION CON POSTCONDICION
+SINGLE FUNC potencia2(LONG l1)
+LONG l2;
+SINGLE s4,s3;
+BEGIN
+s3 := 1.0;
+s4:=s3*s3;
+RETURN s4;
+POST : (s4 > s3);
+END;
+
+**BLOQUE DE PROGRAMA
+BEGIN
+
+l1:= 2;
+l2 := potenciall(LONG l1); 
+IF (l2 == 4) THEN
+   PRINT(%Anduvo bien%);
+ENDIF;
+
+s1 := 2.0;
+TRY
+  s2 := potenciass(SINGLE s1);
+CATCH
+BEGIN
+  s2 := 20.0;
+END;
+
+IF (s2 == 20.0) THEN
+   PRINT(%Se fue por el catch%); ** Está mal. En este caso, la post se cumplió. No se tenía que ir por el catch
+ELSE
+   PRINT(%Se cumplio la poscondicion%);
+ENDIF; 
+
+s1 := 2.0;
+TRY
+  s2 := potenciass2(SINGLE s1);
+CATCH
+BEGIN
+  s2 := 20.0;
+END;
+
+IF (s2 == 20.0) THEN
+   PRINT(%Se fue por el catch%);
+ELSE
+   PRINT(%Se cumplio la poscondicion%); ** Está mal, en este caso la post no se cumplió
+ENDIF; 
+
+END

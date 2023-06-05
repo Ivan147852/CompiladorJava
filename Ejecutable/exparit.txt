@@ -1,0 +1,70 @@
+PROGRAMA;
+
+**El codigo debería compilar, e imprimir "ESTA BIEN" si la operación fue correcta
+**y "NO ESTA BIEN" si la operacion fue incorrecta
+
+**LISTA DE VARIABLES, UNA O MÁS
+LONG l1,l2,l3;
+SINGLE s1,s2,s3;
+
+BEGIN
+
+l1:= 0;
+l2:= 1;
+l3:= 2;
+
+l1 := l2 + l3;
+IF (l1 == 3) THEN
+PRINT(%Esta bien l1%);
+ELSE
+PRINT(%NO ESTA BIEN%);
+ENDIF;
+l1 := l2 - l3;
+IF (l1 == -1) THEN
+PRINT(%Esta bien l2%);
+ELSE
+PRINT(%NO ESTA BIEN%);
+ENDIF;
+l1 := l2 * l3;
+IF (l1 == 2) THEN
+PRINT(%Esta bien l3%);
+ELSE
+PRINT(%NO ESTA BIEN%);
+ENDIF;
+l1 := l2 / l3;
+IF (l1 == 0) THEN
+PRINT(%Esta bien l4%);
+ELSE
+PRINT(%NO ESTA BIEN%);
+ENDIF;
+
+s1:= 0.;
+s2:= 1.;
+s3:= 2.;
+
+s1 := s2 + s3;
+IF (s1 == 3.0) THEN
+PRINT(%Esta bien s1%);
+ELSE
+PRINT(%NO ESTA BIEN%);
+ENDIF;
+s1 := s2 - s3;
+IF (s1 == -1.0) THEN
+PRINT(%Esta bien s2%);
+ELSE
+PRINT(%NO ESTA BIEN%);
+ENDIF;
+s1 := s2 * s3;
+IF (s1 == 2.0) THEN
+PRINT(%Esta bien s3%);
+ELSE
+PRINT(%NO ESTA BIEN%);
+ENDIF;
+s1 := s2 / s3;
+IF (s1 == 0.5) THEN
+PRINT(%Esta bien s4%);
+ELSE
+PRINT(%NO ESTA BIEN%);
+ENDIF;
+
+END

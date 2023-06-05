@@ -1,0 +1,34 @@
+PROGRAMA;
+
+**Hay dos errores, una funcion redeclarada que además retorna incorrectamente el tipo
+
+**FUNCION CON POSTCONDICION
+SINGLE FUNC potenciass(SINGLE s3)
+SINGLE s4;
+BEGIN
+s4:=s3*s3;
+RETURN s4;
+POST : (s4 > s3);
+END;
+
+LONG FUNC f1(LONG pl1)
+BEGIN
+pl1 := 10;
+RETURN pl1;
+END;
+
+**FUNCION REDECLARADA
+SINGLE FUNC f1(LONG pl1)
+BEGIN
+**RETORNO INCORRECTO DE TIPO
+pl1 := 10;
+RETURN pl1;
+END;
+
+BEGIN
+
+**MENSAJE SIMPLE
+
+PRINT(%Prueba declaracion funciones%);
+
+END

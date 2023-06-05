@@ -1,0 +1,33 @@
+PROGRAMA;
+
+**LISTA DE VARIABLES, UNA O MÁS
+LONG l1,l2,l3;
+SINGLE s1,s2,s3;
+
+**FUNCION CON POSTCONDICION
+SINGLE FUNC potenciass(SINGLE s3)
+SINGLE s4;
+BEGIN
+s4:=s3*s3;
+RETURN s4;
+POST : (s4 > s3);
+END;
+
+BEGIN
+
+
+
+**MENSAJE 
+
+**MENSAJE SIMPLE
+PRINT(%Este es un mensaje simple%);
+
+**MENSAJE MULTILINEA
+PRINT(%Este es +
++ un mensaje +
++ multilinea%);
+
+PRINT(%Este es un mensaje simple%);
+
+
+END

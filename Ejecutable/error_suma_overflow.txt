@@ -1,0 +1,14 @@
+PROGRAMA;
+
+**El programa debería compilar, y al ejecutarlo en assembler debería aparecer
+**el cartel de overflow.
+
+LONG l1,l2,l3;
+
+BEGIN
+
+l1 := 2147483647;
+l2 := -2147483648;
+l3 := l1 - l2; **error overflow de suma
+
+END

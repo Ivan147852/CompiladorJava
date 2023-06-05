@@ -1,0 +1,15 @@
+PROGRAMA;
+
+**El programa debería compilar para probarlo en assembler y recibir un mensajes de error
+**de division por cero. El programa finaliza al encontrar el error.
+**Hay que comentar la primer linea y descomentar la segunda linea para probar flotantes
+
+LONG l1;
+SINGLE s1;
+
+BEGIN
+
+l1 := 10/0; **error divison por cero
+**s1 := 10.0/0.0; **error divison por cero
+
+END

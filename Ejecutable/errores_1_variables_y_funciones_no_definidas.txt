@@ -1,0 +1,14 @@
+PROGRAMA;
+
+**a y funcion1 no fueron definidas
+
+SINGLE b;
+
+BEGIN
+
+**MENSAJE SIMPLE
+
+a := 5;
+b := funcion1(SINGLE b);
+
+END

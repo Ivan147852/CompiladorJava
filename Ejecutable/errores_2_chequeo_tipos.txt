@@ -1,0 +1,26 @@
+PROGRAMA;
+
+**todos las asignaciones (4) son incompatibles
+
+**TIPO DEFINIDO
+TYPEDEF td = SINGLE FUNC (LONG);
+td x, y, z;
+
+LONG FUNC potencial(LONG l1)
+BEGIN
+l1 := l1*l1;
+RETURN l1;
+END;
+
+LONG a;
+SINGLE b;
+
+BEGIN
+
+a := 5.5;
+b := 5;
+
+b := potencial(LONG a);
+x := potencial;
+
+END
